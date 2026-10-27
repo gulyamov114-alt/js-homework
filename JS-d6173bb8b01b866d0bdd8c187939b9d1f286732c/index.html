@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Library</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>My Library</h1>
+    <button id="new-book-btn" type="button">+ New Book</button>
+  </header>
+
+  <main>
+    <p id="empty-message" hidden>No books yet. Add your first one!</p>
+    <section id="library" aria-label="Book list"></section>
+  </main>
+
+  <dialog id="book-dialog">
+    <form id="book-form">
+      <h2>New Book</h2>
+
+      <label>Title
+        <input type="text" name="title" required>
+      </label>
+      <label>Author
+        <input type="text" name="author" required>
+      </label>
+      <label>Pages
+        <input type="number" name="pages" min="1" required>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" name="read"> I have read this book
+      </label>
+
+      <div class="actions">
+        <button type="button" id="cancel-btn" class="secondary">Cancel</button>
+        <button type="submit">Add Book</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
